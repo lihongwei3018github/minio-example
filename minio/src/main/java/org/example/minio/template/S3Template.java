@@ -32,7 +32,7 @@ public class S3Template {
         amazonS3.createBucket(s3Properties.getBucketName());
     }
 
-    public boolean upload(String key, File file) {
+    public boolean uploadFile(String key, File file) {
         return ObjectUtils.isNotEmpty(amazonS3.putObject(s3Properties.getBucketName(), key, file));
     }
 
